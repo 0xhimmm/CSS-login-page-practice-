@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch+Pop&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+    --background: #f5f7fa;
+    --input-fields: #fff;
+    --border: #d1d9e6;
+    --primaryText: #2c3e50;
+    --accentButton: #ff79c6;
+    --hoverButton: bd65aa;
+}
+
+/* || DARL THEME */
+@media (prefers-color-scheme: dark) {
+    :root {
+    --background: #1e1e2f;
+    --input-fields: #2d2d44;
+    --border: #44475a;
+    --primaryText: #f8f8f2;
+    --accentButton: #ff79c6;
+    --hoverButton: #bd65aa;
+    }
+}
+
+body {
+    background-color: var(--background);
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif
+}
+
+.container {
+    background-color: var(--input-fields);
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0, 0.3);
+    border-radius: 12px;
+}
+
+input[type=text], input[type=email], select {
+    background-color: var(--background);
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--primaryText);
+    display: inline-block;
+    font-weight: 900;
+}
+
+input[type=submit] {
+    float: right;
+    background-color: var(--accentButton);
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: var(--hoverButton);
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 10s infinite ease-in-out alternate;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 10%;
+    background-color: #6272a4;
+}
+
+.circle2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    left: 70%;
+    background-color: #8be9fd;
+    animation-delay: 2s;
+}
+
+.circle3 {
+    width: 60px;
+    height: 60px;
+    top: 27%;
+    left: 45%;
+    background-color: #b993f9;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0) scale(1);
+    }
+
+    50% {
+        transform: translate(40px, -20px) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-40px, 20px) scale(1);
+    }
+}
