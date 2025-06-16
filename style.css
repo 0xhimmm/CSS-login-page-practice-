@@ -21,7 +21,7 @@
     --primaryText: #5d4037;
 }
 
-/* || DARL THEME */
+/* || DARK THEME */
 @media (prefers-color-scheme: dark) {
     :root {
     --accentButton: #ff79c6;
